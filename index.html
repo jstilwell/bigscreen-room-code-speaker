@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+
     <link href="./style.css" rel="stylesheet">
     <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+
     <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
@@ -20,12 +22,13 @@
         <div class="container">
             <section class="showcase" v-for="sample in collection" :key="sample">
                 <section class="nes-container with-title">
+                    <!-- Title -->
                     <h3 class="title">BigScreen Room Code Speaker</h3>
                     <section class="nes-container">
                         <section class="message-list">
                             <section class="message -left">
                                 <i class="nes-octocat animate"></i>
-                                <!-- Balloon -->
+                                <!-- Balloon & Buttons -->
                                 <div class="nes-balloon from-left">
                                     <p>Hi! Your super special room code is <span id="roomCode"></span>!</p>
                                     <button class="nes-btn is-primary" onClick="playCode()">PLAY IT!</button>
@@ -34,7 +37,7 @@
                             </section>
 
                             <section class="message -right">
-                                <!-- Balloon -->
+                                <!-- Sassy Balloon -->
                                 <div class="nes-balloon from-right">
                                     <p>Oh, cool! Why don't you eat my scrum you dumb fucking idiot?</p>
                                 </div>

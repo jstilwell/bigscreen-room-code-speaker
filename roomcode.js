@@ -7,7 +7,7 @@ document.getElementById("roomCode").innerHTML = roomCode
 // Text to speech settings
 let utter = new SpeechSynthesisUtterance()
 utter.lang = "en-US"
-utter.text = `The room code is <say-as interpret-as="characters">${slowCode}</say-as>`
+utter.text = `The room code is ${slowCode}`
 utter.volume = 0.7
 utter.rate = 0.25
 
