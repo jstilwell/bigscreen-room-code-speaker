@@ -11,7 +11,7 @@ utter.text = `The room code is ${slowCode}`
 utter.volume = 0.7
 utter.rate = 0.25
 
-// Repeat
+// Repeat code 5 times
 var i = 1
 
 function playCode() {

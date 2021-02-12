@@ -7,49 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
-    <link href="./style.css" rel="stylesheet">
-    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.rawgit.com/kimeiga/bahunya/css/bahunya-0.1.3.css" />
+    <link rel="stylesheet" href="./style.css" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
     <link rel="manifest" href="./icons/site.webmanifest">
+
     <title>BigScreen Room Code Speaker</title>
 </head>
 
 <body>
-    <div id="nescss">
-        <div class="container">
-            <section class="showcase" v-for="sample in collection" :key="sample">
-                <section class="nes-container with-title">
-                    <!-- Title -->
-                    <h3 class="title">BigScreen Room Code Speaker</h3>
-                    <section class="nes-container">
-                        <section class="message-list">
-                            <section class="message -left">
-                                <i class="nes-octocat animate"></i>
-                                <!-- Balloon & Buttons -->
-                                <div class="nes-balloon from-left">
-                                    <p>Hi! Your super special room code is <span id="roomCode"></span>!</p>
-                                    <button class="nes-btn is-primary" onClick="playCode()">PLAY IT!</button>
-                                    <button class="nes-btn" onClick="window.speechSynthesis.cancel()">STOP!</button>
-                                </div>
-                            </section>
+    <header>
+        <h1 id="roomCode"></h1>
+        <button onClick="playCode()">PLAY IT!</button>
+        <button onClick="window.speechSynthesis.cancel()">STOP!</button>
+    </header>
 
-                            <section class="message -right">
-                                <!-- Sassy Balloon -->
-                                <div class="nes-balloon from-right">
-                                    <p>Oh, cool! Why don't you eat my scrum you dumb fucking idiot?</p>
-                                </div>
-                                <i class="nes-mario"></i>
-                            </section>
-                        </section>
-                    </section>
-                </section>
-            </section>
-        </div>
+    <main>
+        <article>
+            <h5>HOW DO YOU USE THIS?</h5>
+            <p>Add <code>?code=</code> to the URL followed by your BigScreen VR room code. If you did it right, the code
+                will be big and centered and the "PLAY IT!" button will play it 5 times aloud via text-to-speech.</p>
+            <h5>EXAMPLE:</h5>
+            <code>https://vrbois.com/?code=rxfc2m23</code>
 
-    </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>View source on <a href="https://github.com/jstilwell/bigscreen-room-code-speaker" target="_blank">Github</a>
+        </p>
+    </footer>
 
     <script src="./roomcode.js"></script>
 
