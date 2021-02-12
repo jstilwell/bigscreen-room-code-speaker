@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="./style.css" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <title>BigScreen Room Code Screamer</title>
+</head>
+
+<body>
+    <div id="nescss">
+        <div class="container">
+            <section class="showcase" v-for="sample in collection" :key="sample">
+                <section class="nes-container with-title">
+                    <h3 class="title">BigScreen Room Code</h3>
+                    <section class="nes-container">
+                        <section class="message-list">
+                            <section class="message -left">
+                                <i class="nes-octocat animate"></i>
+                                <!-- Balloon -->
+                                <div class="nes-balloon from-left">
+                                    <p>Hi! Your super special room code is <span id="roomCode"></span>!</p>
+                                    <button class="nes-btn is-primary" onClick="playCode()">PLAY IT!</button>
+                                    <button class="nes-btn" onClick="window.speechSynthesis.cancel()">STOP!</button>
+                                </div>
+                            </section>
+
+                            <section class="message -right">
+                                <!-- Balloon -->
+                                <div class="nes-balloon from-right">
+                                    <p>Oh, cool! Why don't you eat my scrum you dumb fucking idiot?</p>
+                                </div>
+                                <i class="nes-mario"></i>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </div>
+
+    </div>
+
+    <script src="./roomcode.js"></script>
+
+</body>
+
+</html>
