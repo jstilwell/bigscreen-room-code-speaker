@@ -1,7 +1,7 @@
 // Get room code from URL
 const arr = document.URL.match(/code=([a-zA-Z0-9_.-]+)/)
 const roomCode = arr[1]
-const slowCode = roomCode.replace(/(.{1})/g, "$1.-")
+const slowCode = roomCode.replace(/(.{1})/g, "$1 ")
 document.getElementById("roomCode").innerHTML = roomCode
 
 // Text to speech settings
